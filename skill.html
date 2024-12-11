@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Manikandan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(40, 104, 241);
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            font-size: 23px;
+            background-color: black;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        #skills {
+            padding: 30px 0;
+        }
+
+        .skills-container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .skill {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill .label {
+            font-weight: bold;
+            font-size: 18px;
+            margin-right: 20px;
+            width: 150px;
+        }
+
+        .skill .progress {
+            flex-grow: 1;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .skill .progress-bar {
+            height: 100%;
+            text-align: left;
+            padding-left: 10px;
+            line-height: 30px;
+            font-weight: bold;
+            color: white;
+            border-radius: 15px;
+            width: 0;
+            animation: scaleIn 2s ease-out forwards, bounceIn 1s ease 1.5s forwards;
+        }
+
+        .python {
+            background-color: #4caf50;
+        }
+
+        .html {
+            background-color: #ff9800;
+        }
+
+        .mysql {
+            background-color: #607d8b;
+        }
+
+        .django {
+            background-color: #ff5722;
+        }
+
+        .flask {
+            background-color: #8bc34a;
+        }
+
+        .bootstrap {
+            background-color: #607d8b;
+        }
+
+        @media (max-width: 768px) {
+            .skills-container {
+                width: 100%;
+                padding: 0 15px;
+            }
+
+            .skill .progress-bar {
+                font-size: 14px;
+                padding-left: 5px;
+            }
+        }
+
+        @keyframes scaleIn {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: var(--bar-width);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scaleY(0.2);
+            }
+            50% {
+                transform: scaleY(1.1);
+            }
+            100% {
+                transform: scaleY(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="navbar-brand text-white" href="index.html" style="font-size: 30px;">My Portfolio</a>
+        <div>
+            <a href="about.html">About</a>
+            <a href="skill.html">Skills</a>
+            <a href="project.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section id="skills">
+        <div class="container text-center">
+            <h2 style="font-size: 40px;">Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <div class="label" style="font-size: 20px;">HTML, CSS, JavaScript</div>
+                    <div class="progress">
+                        <div class="progress-bar html" style="--bar-width: 90%;">80%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="label" style="font-size: 20px;">Bootstrap</div>
+                    <div class="progress">
+                        <div class="progress-bar bootstrap" style="--bar-width: 80%;">75%</div>
+                    </div>
+                </div>
+
+                <!-- Python -->
+                <div class="skill">
+                    <div class="label" style="font-size: 20px;">Python</div>
+                    <div class="progress">
+                        <div class="progress-bar python" style="--bar-width: 85%;">85%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="label" style="font-size: 20px;">Flask</div>
+                    <div class="progress">
+                        <div class="progress-bar flask" style="--bar-width: 70%;">80%</div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="label" style="font-size: 20px;">Django</div>
+                    <div class="progress">
+                        <div class="progress-bar django" style="--bar-width: 75%;">85%</div>
+                    </div>
+                </div>
+
+                <div class="skill" style="font-size: 20px;">
+                    <div class="label">MySQL</div>
+                    <div class="progress">
+                        <div class="progress-bar mysql" style="--bar-width: 80%;">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

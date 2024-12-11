@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+        #projects {
+            background-color: rgb(40, 104, 241);  
+            padding: 20px 20px;
+            max-height: 100vh;
+            margin-top: 0;  
+        }
+
+        #projects h2 {
+            text-align: center;
+            color: white; 
+            font-size: 45px;
+            position: relative;
+            top: 0%;  
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .project-card {
+            background-color: black;
+            color: rgb(246, 246, 246);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            font-size: 20px;
+            text-align: center; 
+            width: 500px;  
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        .left { 
+            margin-right: 1%;
+            width: 570px;
+            word-spacing: 8px;
+        }
+        
+        .center { 
+            margin-left: auto;
+            margin-right: auto;
+            width: 500px;
+            
+            word-spacing: 5px;
+        }
+        
+        .right { 
+            margin-left: 2%;
+            width: 630px;
+            
+            word-spacing: 8px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            font-size: 23px;
+            background-color: black;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+        .projects-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .project-card {
+            width: 80%; 
+        }
+
+        nav {
+            flex-direction: column;
+            align-items: center;
+            font-size: 18px; 
+        }
+
+        nav a {
+            margin: 10px 0; 
+        }
+
+        #projects h2 {
+            font-size: 35px; 
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="navbar-brand text-white" href="index.html" style="font-size: 30px;">My Portfolio</a>
+        <div>
+            <a href="about.html">About</a>
+            <a href="skill.html">Skills</a>
+            <a href="project.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project-card left">
+                <h5 style="font-size: 20px;">Calculator Project</h5>
+                <p>A simple and functional calculator built using HTML, CSS, and JavaScript to perform basic arithmetic operations.</p>
+            </div>
+            
+            
+            <div class="project-card right">
+                <h5 style="font-size: 20px;">XO Game</h5>
+                <p>A Python-based console game implementing core game logic and turn-based system.</p>
+            </div>
+        </div>
+
+        <div class="projects-container">
+            <div class="project-card center">
+                <h5 style="font-size: 20px;">Employee Management</h5>
+                <p>A web app to manage employee details using Django and MySQL.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

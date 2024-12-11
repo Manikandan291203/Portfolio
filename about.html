@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+            background-color: rgb(40, 104, 241);
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            font-size: 23px;
+            background-color: black;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #e74c3c;
+        }
+
+        @keyframes navbarBackground {
+            0% {
+                background-color: transparent;
+            }
+            100% {
+                background-color: black;
+            }
+        }
+
+       
+        section#about {
+            display: flex;
+            margin-right: 2%;
+            padding: 40px 0;
+            height: 100vh;
+        }
+
+        section#about .container {
+            display: flex;
+            align-items: center;
+            
+            justify-content: space-between;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin-right: 30px;
+            opacity: 0; 
+            animation: slideInLeft 1.5s ease-out forwards; 
+        }
+        
+        section#about h2 {
+            font-size: 55px;
+            color: white;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out forwards; 
+            animation-delay: 0.5s;
+            margin-right: 30%;
+        }
+
+        section#about p {
+            font-size: 21px;
+            color: black;
+            line-height: 1.6;
+            margin-left: 9%;
+            max-width: 800px;
+            opacity: 0; 
+            animation: fadeInUp 2s ease-out forwards;
+            animation-delay: 1s;
+        }
+
+        section#about h3 {
+            font-size: 30px;
+            margin-left: 9%;
+            color:white;
+            margin-top: 30px;
+            opacity: 0; 
+            animation: fadeInUp 2s ease-out forwards; 
+            animation-delay: 1.5s;
+        }
+
+        section#about ul {
+            list-style: none;
+            margin-left: 9%;
+            padding: 0;
+            opacity: 0;
+            animation: fadeInUp 2s ease-out forwards; 
+            animation-delay: 2s;
+        }
+
+        section#about ul li {
+            font-size: 20px;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-left: 5px solid #e74c3c;
+            border-radius: 5px;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+@media (max-width: 768px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    section#about p, section#about ul li {
+        font-size: 16px;
+    }
+
+    section#about h2, section#about h3 {
+        font-size: 24px;
+    }
+
+    section#about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin-bottom: 20px;
+    }
+}
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="navbar-brand text-white" href="index.html" style="font-size: 30px;">My Portfolio</a>
+        <div>
+            <a href="about.html">About</a>
+            <a href="skill.html">Skills</a>
+            <a href="project.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <section id="about">
+        <div class="container">
+            <div>
+                <img src="mypic.jpg" alt="Manikandan" class="profile-image"> 
+            </div>
+            <div style="margin-bottom: 2%;">
+                <h2>About Me</h2>
+                <p>
+                    I am Manikandan, a dedicated Python Full Stack Developer with a B.Sc. in Computer Science. 
+                    I have honed my skills through a range of projects that include an XO Game, an Employee Management System, 
+                    and Blog applications, utilizing technologies such as Python, Django, and MySQL. 
+                    My focus lies in developing efficient, scalable solutions that align with industry standards. I am committed to continuous learning 
+                    and eager to contribute to impactful projects that drive growth and innovation in the tech industry.
+                </p>
+                <h3>Education</h3>
+                <ul>
+                    <li><strong>Python Full Stack Development</strong> - Altalya Solution, Tirupur</li>
+                    <li><strong>B.Sc. Computer Science</strong> - TERF's Academy College of Arts and Science</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
